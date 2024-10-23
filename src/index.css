@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #f0f0f0;
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+  }
+
+  .list-challenges li {
+    @apply bg-gray-50 rounded-lg p-4 shadow-sm transition-all duration-300 
+           hover:shadow-md hover:translate-x-1 border border-gray-100;
+  }
+
+  .mermaid svg {
+    @apply max-w-full h-auto mx-auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  }
+}
+
+/* Windows 11 style scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
